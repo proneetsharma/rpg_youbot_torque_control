@@ -1,4 +1,4 @@
-#Problem
+## Problem
 
 1. Playback produces undefined jerks.
 
@@ -120,3 +120,14 @@ rosbag play name_of_bag_file.bag
 ``` 
 
 
+# For running The ETH Zurich Code
+
+1. Removed the standard youbot driver ROS interface.
+2. Built and Installed youbot_ros_interface by ETC Zurich in catkin_ws.
+	
+	Commands to run:
+```sh
+		export YOUBOT_CONFIG_FOLDER_LOCATION=/opt/ros/indigo/share/youbot_driver/config
+		sudo setcap cap_net_raw+ep devel/lib/youbot_driver_ros_interface/youbot_driver_ros_interface
+		sudo ldconfig devel/lib			# under the root of the catkin_ws
+```
